@@ -1,0 +1,883 @@
+\documentclass[0pt, a4 paper]{report}
+\setlength{\parskip}{\baselineskip}
+\usepackage{pgf}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{array}
+% --- Remove dots from TOC but keep same spacing ---
+\usepackage{tocloft}
+
+\usepackage{tocloft}
+
+% Center and make "Contents" smaller
+\renewcommand{\contentsname}{\centering\Large Contents} 
+
+% Remove dotted leaders
+\renewcommand{\cftsecleader}{\hfill}
+\renewcommand{\cftsubsecleader}{\hfill}
+
+% Keep vertical spacing same as before
+\setlength{\cftbeforesecskip}{17pt}
+\setlength{\cftbeforesubsecskip}{2pt}
+
+
+
+% ===== List of Figures title: centered and moderate size =====
+\renewcommand{\cftloftitlefont}{\hfill\Large\bfseries} % title font & size
+\renewcommand{\cftafterloftitle}{\hfill}                    % center alignment
+
+% ===== Remove dotted leaders =====
+\renewcommand{\cftfigleader}{\hfill}      % removes dots for figure entries
+
+% ===== Keep vertical spacing same as before =====
+\setlength{\cftbeforefigskip}{10pt}      % spacing before figure entries
+
+\usepackage[document]{ragged2e}\justifying 
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{array}
+\usepackage{cite}
+\usepackage{mathptmx}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[left=1.5cm,top=2.5cm,right=1.5cm,bottom=3 cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{sectsty}
+\chapterfont{\Large\centering}
+\sectionfont{\Large}
+\subsectionfont{\Large}
+
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{CodeBlueprint AI}
+\fancyfoot[L]{Dept. of CSE, MSBECL}
+\fancyfoot[R]{Page No. \thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{CodeBlueprint AI}
+    \fancyfoot[L]{Dept. of CSE, MSBECL}
+    \fancyfoot[R]{Page No. \thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+
+
+ \begin{document}
+ 
+
+
+
+     
+
+\title{\section{"CodeBlueprint AI"}}
+
+\title{\section}
+\author{kulkarni Prajakta Vijay}
+\date{November 04,2026}
+\pagenumbering{empty}
+
+
+ \begin{center}
+
+ 
+    \Large { A
+
+    \vspace{0.3 cm}
+    
+    Project Report 
+    
+   \vspace{0.4 cm} 
+   
+
+     \noindent{On }
+
+    
+    \vspace{0.1 cm}
+    
+
+\begin{center}
+     \noindent {\Large \textbf{“CodeBlueprint AI”}}
+
+\vspace{0.1 cm}
+     \noindent {Submitted By }
+   
+     \noindent \textbf{Kulkarni Prajakta Vijay} 
+ 
+     
+     \noindent {PRN:23021291242032}
+
+
+     \vspace{0.3 cm}
+
+     \noindent Under The Guidance 
+     
+     \noindent of
+    
+    \noindent
+    \textbf{Prof. N. G. Dharashive}
+     \vspace{1 cm}
+
+
+\noindent \Large \textbf{COMPUTER SCIENCE AND ENGINEERING DEPARTMENT}
+\vspace{0.2 cm}
+
+\noindent  \textbf{
+M.S.Bidve Engineering College, Latur}
+
+\noindent {Affiliated To}
+\vspace{0.2 cm}
+
+\includegraphics[width=3 cm]{Dbatu.jpeg }  
+\vspace{0.5 cm}
+
+\noindent \textbf{Dr.Babesaheb Ambedkar Technological University, Lonere}
+
+\noindent \textbf{[2026-2027]} 
+
+
+\end{center}
+
+\thispagestyle{empty}
+
+
+
+\newpage
+
+
+\vspace{4 cm}
+
+\begin{center}
+\large \bfseries{CERTIFICATE}
+\end{center}
+
+
+
+
+\vspace{1 cm}   
+
+\justify  \Large This is to certify that \textbf{Kulkarni Prajakta Vijay} has successfully submitted a project on \textbf{CodeBlueprint AI} for the Partial fulfillment of her Degree in the Computer Science and Engineering department as prescribed by the Dr.BabasahebAmbedkar Technological University, Lonere during academic year 2026-27.
+ 
+
+
+\vspace{7 cm}
+\Large \textbf{Prof.Dr.N.M.Halgare}  
+\hspace{1.2 cm}
+\textbf{Prof.Dr.N.M.Halgare}
+\hspace{1.5 cm}
+\textbf{Prof.Dr.S.M.Jagade} 
+
+
+\noindent \hspace{1.8 cm} 
+        \textbf{Guide}
+        \hspace{4.5 cm}
+        \textbf{H.O.D.}
+        \hspace{3.7 cm}
+        \textbf{Principal}
+
+\thispagestyle{empty}
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+    \large
+    \bfseries{\textbf{ACKNOWLEDGEMENT}}
+\end{center}
+    
+\vspace{0.5 cm}
+\begin{justify} 
+I gratefully acknowledge for the assistance, cooperation, guidance and clarifications provided during the development of the project CodeBlueprint AI. My extreme gratitude to Prof. N. M. Halgare who guided me throughout the project. Without his willing disposition, spirit of accommodation, frankness, timely clarification and above all faith in us, this Project could not have been completed in due time. His readiness to discuss all important matters at work deserves special attention. I would also like to thank whole of the faculty of the college for their cooperation and important support.
+
+
+
+
+\end{justify}
+    
+\vspace{0.3 cm}
+\begin{flushleft}
+ 
+ Thank You.   
+ 
+\end{flushleft}
+ 
+
+\vspace{1 cm}
+\begin{flushright}
+\textbf{Kulkarni Prajakta Vijay} 
+
+\end{flushright}
+
+
+\newpage
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\clearpage
+\pagestyle{fancy}
+\addcontentsline{toc}{chapter}{ABSTRACT }
+\begin{center}
+    \LARGE\bfseries{ABSTRACT }
+\end{center} 
+\vspace{0.5 cm}
+
+\justify CodeBlueprint AI is a web-based application designed to analyze software projects and simplify codebase understanding. It automatically examines uploaded source code files to identify programming languages, dependencies, code metrics, security issues, and project structure. It also generates architecture diagrams and dependency graphs using Mermaid.js to provide a clear visual representation of the codebase. The system aims to help developers and students understand, analyze, and maintain software projects more efficiently through automated code analysis and visualization.
+Additionally, CodeBlueprint AI provides features such as security analysis, code quality assessment, and technical debt identification to highlight potential problems in software projects. By combining automated analysis with visual representation, the system reduces the effort required for manual code inspection and helps users identify areas for improvement. It aims to make software development more organized, understandable, and efficient, especially for students and developers working with complex codebases.CodeBlueprint AI also provides rule-based security analysis to identify potentially unsafe coding patterns in the uploaded source files. It provides code quality insights and technical debt information that can help developers recognize areas requiring improvement. The system analyzes relationships between different files and components and converts the extracted information into architecture diagrams and dependency graphs using Mermaid.js. These visual representations make it easier to understand how different parts of a software application are connected and how the project is organized.
+
+ 
+
+
+
+
+
+
+
+
+
+\newpage  \begin{center}
+ \tableofcontents
+ \end{center}
+
+\newpage \listoffigures
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\chapter{INTRODUCTION}
+
+\justify Software development involves writing, managing, analyzing, and maintaining large amounts of source code. As software projects grow in size and complexity, understanding the overall structure, relationships between files, dependencies, and internal working of the application becomes difficult. Developers and students often spend considerable time manually examining code to understand project architecture and identify errors or potential security issues.
+
+\justify CodeBlueprint AI is a web-based application developed to simplify the process of understanding and analyzing software projects. It allows users to upload their source code files and automatically analyzes the codebase to extract useful information, such as programming languages, file structures, dependencies, code metrics, and security issues.
+\justify The system also generates visual representations of software architecture and dependency relationships using Mermaid.js. These diagrams help users understand how different components and files are connected within a project. In addition, the application provides code analysis and security auditing features to identify potential weaknesses and areas that require improvement.
+
+\justify CodeBlueprint AI aims to reduce manual code inspection and provide developers and students with a centralized platform for software project analysis. By combining automated code analysis, visualization, and security checking, the system makes codebase understanding easier, faster, and more efficient.Furthermore, CodeBlueprint AI is designed to support better software maintenance and development practices. It provides organized project information through a user-friendly interface, allowing users to review analysis results and understand the overall quality of their codebase. 
+
+\vspace{1cm}
+
+\justify The rapid growth of software development has increased the need for effective tools that help developers understand and maintain software applications. Modern software projects often contain multiple files, folders, libraries, and interconnected components. As the project grows, identifying the relationships between different files and understanding the overall system structure becomes more challenging. This creates difficulties, especially when developers work with unfamiliar or previously developed codebases.
+
+\justify Code analysis plays an important role in software development because it helps developers understand the quality, structure, and functionality of their applications. By examining source code, developers can identify programming languages, dependencies, code complexity, and possible security weaknesses. However, performing these activities manually requires considerable time and effort. Therefore, automation can make the analysis process faster and more organized.
+
+\justify CodeBlueprint AI is designed to address these challenges by providing a centralized platform for analyzing software projects. It allows users to upload their source code files and automatically extracts important project information. The system uses different analysis modules to identify programming languages, detect dependencies, calculate code metrics, and examine potential security issues. This information helps users understand the internal structure and quality of their software projects. One of the important features of CodeBlueprint AI is architecture visualization. Understanding how different files and components interact is essential for maintaining and modifying software applications. The system uses Mermaid.js to generate architecture diagrams and dependency graphs based on the relationships identified during code analysis. These visual representations make complex project structures easier to understand and help developers identify connections between different components. 
+
+\justify Another important aspect of the system is code quality and security analysis. Maintaining good code quality is necessary for developing reliable and maintainable applications. CodeBlueprint AI examines source code using predefined rules to identify potential security weaknesses and areas that may require improvement. It also provides technical debt insights to help users understand possible maintenance challenges in their projects.
+
+
+\newpage
+\chapter{PROJECT OVERVIEW}
+
+\textbf{\section{ History}}
+
+
+\justify The development of software applications has increased rapidly with advancements in technology. Earlier, software programs were generally small and contained a limited number of files and functions. Developers could easily understand the structure of such applications by manually examining the source code. However, modern software applications have become more complex and contain multiple files, modules, libraries, and dependencies. Understanding and maintaining these large codebases has become a challenging task.
+As software development practices evolved, developers started using different tools and techniques to analyze source code, identify errors, measure code quality, and understand the internal structure of applications. Code analysis tools help developers examine source files, identify programming languages, calculate code metrics, and detect possible security weaknesses. These tools reduce manual effort and help improve the overall quality of software applications.
+
+\justify Another important development in software engineering is the use of visualization techniques. Architecture diagrams and dependency graphs help developers understand how different components of an application are connected. Instead of reading large amounts of source code, developers can refer to graphical representations to understand the overall project structure. Such visualizations are especially useful when working with complex applications or when a new developer needs to understand an existing project.
+
+
+\vspace{3cm}
+\justify The system also performs rule-based security analysis to identify certain coding patterns that may represent potential security risks. It provides technical debt and code quality insights to help users understand areas that may require improvement. Furthermore, the extracted relationships between project components are converted into architecture diagrams and dependency graphs using Mermaid.js, making the project structure easier to understand. The development of CodeBlueprint AI follows a modular approach in which different components perform specific analysis tasks. Technologies such as React.js, Node.js, Express.js, MongoDB, and Mermaid.js are used to develop the application. The frontend provides an interface for users, while the backend processes uploaded files, performs analysis, and stores project-related information. The main purpose of developing this project is to reduce the manual effort involved in codebase examination and provide students and developers with a convenient way to understand software projects. It brings important code analysis features together in one platform and supports better project understanding, maintenance, and improvement.
+
+\justify Thus, CodeBlueprint AI represents an effort to make software codebase analysis more organized, accessible, and understandable through automation and visual representation.
+
+
+\textbf{\section{ Problem Statements}}
+
+\justify The major problems identified in existing software project analysis methods are:
+
+\justify \textbf{1. Complex Code Understanding:} Understanding large software projects and their internal structure is difficult, especially for beginners.
+
+\justify \textbf{2. Manual Code Analysis:} Developers spend considerable time examining source code to identify files, dependencies, and relationships.
+
+\justify \textbf{3. Lack of Visualization:} Understanding the overall architecture and connections between different components becomes difficult without proper diagrams.
+
+\justify \textbf{4. Dependency Identification:} Identifying relationships between internal files and external libraries manually is time-consuming.
+
+\justify \textbf{5. Security Issues:} Potential security weaknesses in source code may remain unnoticed during development.
+
+\justify \textbf{6. Code Quality Assessment:} Developers often lack a centralized platform to examine code metrics and identify areas that require improvement.
+
+\justify Therefore, there is a need for an automated system that analyzes software projects and presents important information in an understandable and organized manner.Understanding and analyzing a software project's codebase is a challenging task, especially when the project contains multiple files, programming languages, libraries, and interconnected components. Developers and students often face difficulties in identifying the overall project structure, understanding relationships between files, and tracking internal and external dependencies. Performing these activities manually is time-consuming and requires considerable technical knowledge. Additionally, identifying potential security weaknesses, measuring code quality, calculating code metrics, and recognizing technical debt can be difficult without proper analysis tools. The lack of a single platform that combines these activities makes the code analysis process less organized and inefficient. 
+
+
+\textbf{\section{ Feasibility and Scope}}
+
+\justify CodeBlueprint AI is feasible because it uses commonly available technologies and development tools. The system can be implemented using the MERN stack and existing code analysis libraries.
+
+\justify \textbf{Feasibility:}
+\justify \textbf{1. Technical Feasibility:} The project uses React.js, Node.js, Express.js, MongoDB, and Mermaid.js, which are suitable for developing a web-based application.
+
+\justify \textbf{2. Economic Feasibility:} The project uses open-source technologies and development tools, reducing overall implementation costs.
+
+\justify \textbf{3. Operational Feasibility:} The application provides a user-friendly interface that allows students and developers to upload projects and view analysis results easily.
+
+\justify \textbf{4. Time Feasibility:} The project can be developed within the available academic project duration by implementing its features in different phases.
+
+
+\justify \textbf{5.Resource Feasibility:} CodeBlueprint AI is resource-feasible because it requires only basic hardware and commonly available software tools for development and execution.
+
+\vspace{2cm}
+\justify \textbf{Scope:}
+
+
+\justify The scope of CodeBlueprint AI is to provide a centralized web-based platform for analyzing software projects and understanding their internal structure. The system focuses on automating important codebase analysis activities and presenting the results in an organized and understandable format. The major areas covered by the project are as follows:
+
+\justify \textbf{1. User Authentication:} The system provides user registration and login facilities to allow users to access their projects securely.
+
+\justify \textbf{2. Project Management:} Users can create projects, manage project details, and maintain their uploaded source-code files through the application.
+
+\justify \textbf{3. Source Code Upload:} Users can upload source-code files for analysis. The system processes the uploaded files and extracts relevant project information.
+
+\justify \textbf{4. Programming Language Detection:} The system identifies programming languages based on file extensions, such as JavaScript, React JavaScript, and TypeScript.
+
+\justify \textbf{5. File Analysis:} The application examines the uploaded project files and identifies source-code files, asset files, and other supported file types.
+
+\justify \textbf{6. Dependency Analysis:} The system identifies internal dependencies between project files and external dependencies such as imported libraries and packages. This helps users understand the relationships between different components.
+
+\justify \textbf{7. Code Metrics Analysis:} It calculates important code metrics, including total lines, non-empty lines, comment lines, and file counts, to provide an overview of the codebase.
+
+\justify \textbf{8. Security Analysis:} The system performs rule-based security checks to identify selected potentially unsafe coding patterns and highlight possible security concerns.
+
+\justify \textbf{9. Architecture Visualization:} The application generates architecture diagrams and dependency graphs using Mermaid.js to represent relationships between different files and components.
+
+\justify \textbf{10. Technical Debt and Code Quality Insights:} The system highlights selected code quality concerns and areas that may require improvement, helping users understand possible maintenance difficulties.
+
+
+\justify \textbf{11. Dashboard and Reports:} The dashboard presents project-related information, analysis results, metrics, and security findings in an organized manner.
+
+\justify \textbf{12. Future Enhancement:} The system can be extended to support complete ZIP-based project uploads, GitHub repository integration, additional programming languages, advanced security rules, and more detailed code analysis features.
+
+\justify Overall, the scope of CodeBlueprint AI is to simplify codebase understanding, improve project analysis, and support better software maintenance through automated analysis and visual representation.
+
+\newpage
+\chapter{DESCRIPTION OF WORK}
+
+\textbf{\section{ Requirement Analysis}}
+
+\justify Requirement analysis is an important phase of software development that identifies the necessary hardware, software, and functional requirements of the proposed system. It helps define the features, resources, and technologies required to develop CodeBlueprint AI successfully.
+
+\justify CodeBlueprint AI is designed as a web-based application that analyzes software projects and provides useful information about their structure, dependencies, code quality, and security.
+
+\justify \textbf{A. Functional Requirements}
+
+\justify The functional requirements describe the main operations performed by the system.
+
+\justify \textbf{1. User Authentication:} The system allows users to register, log in, and securely access their accounts.
+
+\justify \textbf{2. Project Upload:} Users can upload source code files or project folders for analysis.
+
+\justify \textbf{3. Language Detection:} The system identifies programming languages used in the uploaded project.
+
+\justify \textbf{4. Dependency Analysis:} It detects internal file dependencies and external library dependencies.
+
+\justify \textbf{5. Code Metrics:} It calculates code statistics such as total lines, non-empty lines, and comment lines.
+
+\justify \textbf{6. Architecture Visualization:} It generates software architecture diagrams and dependency graphs using Mermaid.js.
+
+\justify \textbf{7. Security Analysis:} It identifies potential security issues using predefined rules.
+
+\justify \textbf{8. Technical Debt Analysis:} It highlights code quality problems and areas that may require improvement.
+
+\justify \textbf{9. Dashboard:} It displays project details and analysis results in an organized manner.
+
+\justify \textbf{B. Non-Functional Requirements}
+
+\justify \textbf{1. Performance:} The system should analyze uploaded projects efficiently.
+
+\justify \textbf{2. Security:} User authentication and project data should be protected.
+
+\justify \textbf{3. Usability:} The interface should be simple, clear, and user-friendly.
+
+\justify \textbf{4. Reliability:} The system should provide consistent analysis results.
+
+\justify \textbf{5. Scalability:} The application should support future feature enhancements.
+
+\justify \textbf{6. Maintainability:} The system should have a modular structure that allows easy updates.
+
+\justify \textbf{7. Flexibility:} The system should support different programming languages and file formats for project analysis.
+
+\justify \textbf{8. Portability:} The application should be accessible through different operating systems using a modern web browser.
+
+
+\vspace{1.5cm}
+\justify \textbf{C. Software Requirements}
+
+\vspace{0.2cm}
+    
+
+\begin{tabular}{||m{7 cm}| |m{7 cm}||} 
+\hline
+\textbf{Software} & \textbf{Purpose} \\
+\hline
+Operating System & Windows 11 \\
+\hline
+Frontend & React.js, HTML, CSS, Javascript\\
+\hline
+Backend  &  Node.js, Express.js \\
+\hline
+Database & MongoDB \\
+\hline
+Diagram Generation  & Mermaid.js \\
+\hline 
+Code Editor & VS Code \\
+\hline
+API Testing & Thunder Client \\ 
+\hline
+Browser & Google Chrome \\ 
+\hline
+\end{tabular}
+
+
+
+\justify \textbf{C. Hardware Requirements}
+
+\vspace{0.2cm}
+    
+
+\begin{tabular}{||m{7 cm}| |m{7 cm}||} 
+\hline
+\textbf{Component} & \textbf{Minimum Requirement} \\
+\hline
+ Processor   & Intel Core i5 or equivalent\\
+\hline
+RAM  &  4 GB \\
+\hline
+Storage & 10 GB free space \\
+\hline
+system  & Laptop \\
+\hline 
+Internet & Required for online services \\
+\hline
+
+\end{tabular}
+
+
+\textbf{\section{ Project design. (System Diagram, UMLs, DFDs)}}
+
+
+\justify Project design describes the overall structure and working of the proposed CodeBlueprint AI system. It explains how different components interact with each other to perform code analysis and generate useful results. The project design includes the system architecture diagram, UML diagrams, and Data Flow Diagrams (DFDs). These diagrams help in understanding the workflow, functionality, and interaction between different modules of the application.
+
+\justify \textbf{System Architecture Diagram}
+
+\justify The system architecture represents the overall working structure of CodeBlueprint AI. It consists of a frontend, backend, database, and code analysis modules.
+
+\vspace{0.5cm}
+\justify \textbf{Working:}
+\justify 1. The user registers or logs into the application.
+\justify 2. The user uploads a source code file or software project.
+\justify 3. The frontend sends the uploaded project to the backend.
+\justify 4. The backend processes the files using different analyzer modules.
+\justify 5. The analyzer identifies programming languages, dependencies, code metrics, and security issues.
+\justify 6. The architecture generator creates diagrams using Mermaid.js.
+\justify 7. The analysis results are stored in MongoDB and displayed on the dashboard.
+
+
+\vspace{1 cm}
+
+\begin{figure} [h]
+    \centering
+    \includegraphics[width=15cm, height=9cm]{mermaid-diagram.png}
+    \caption{System Architecture Diagram}
+    \label{fig:Sys Architecture Diagram}
+\end{figure}
+
+\vspace{2.5cm}
+
+\justify \textbf{UML Diagrams}
+
+\justify UML (Unified Modeling Language) diagrams are used to represent the structure and behavior of a software system. They help developers understand the interaction between users and different system components.
+
+\justify \textbf{A. Use Case Diagram}
+
+\justify The use case diagram represents the interaction between the user and the CodeBlueprint AI application.
+
+\justify Main use cases:
+ \begin{itemize}
+     \item Register and Login
+ \end{itemize}
+ \begin{itemize}
+     \item Manage Profile
+ \end{itemize}
+ \begin{itemize}
+     \item Create Project
+ \end{itemize}
+ \begin{itemize}
+     \item Upload Source Code
+ \end{itemize}
+ \begin{itemize}
+     \item Analyze Code
+ \end{itemize}
+\begin{itemize}
+    \item View Dependencies
+\end{itemize}
+ \begin{itemize}
+     \item View Code Metrics
+ \end{itemize}
+ \begin{itemize}
+     \item Generate Architecture Diagrams
+ \end{itemize}
+ \begin{itemize}
+     \item Perform Security Audit
+ \end{itemize}
+ \begin{itemize}
+     \item View Technical Debt Analysis
+ \end{itemize}
+
+
+\justify \textbf{B. Activity Diagram }
+
+ \justify The activity diagram represents the sequence of activities performed during project analysis.
+
+\justify \textbf{C. Sequence Diagram}
+
+\justify The sequence diagram shows the communication between the user, frontend, backend, analyzer, and database during project analysis.
+
+
+\justify \textbf{D. Class Diagram}
+
+\justify The class diagram represents the main entities of CodeBlueprint AI and their relationships.
+
+
+\vspace{4cm}
+\begin{figure}
+    \centering
+    \includegraphics[width=12cm,height=11cm]{mermaid-diagram (1).png}
+    \caption{Use Case Diagram}
+    \label{fig:Use Case Diagram}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=13cm,height=11cm]{mermaid-diagram (2).png}
+    \caption{Activity Diagram}
+    \label{fig:Activity Diagram}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=13cm,height=9cm]{mermaid-diagram (3).png}
+    \caption{Sequence diagram}
+    \label{fig:sequence Diagram}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=13cm,height=11cm]{mermaid-diagram (4).png}
+    \caption{Class Diagram}
+    \label{fig:Class Diagram}
+\end{figure}
+
+
+\vspace{2cm}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15cm,height=8cm]{mermaid-diagram (6).png}
+    \caption{DFD Level 0}
+    \label{fig:DFD Level 0}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=11cm,height=11cm]{mermaid-diagram (5).png}
+    \caption{DFD Level 1}
+    \label{fig:DFD Level 1}
+\end{figure}
+
+\justify \textbf{Data Flow Diagrams (DFD)}
+\justify A Data Flow Diagram represents how data moves through the system, including the input, processing, storage, and output of information.
+
+\justify \textbf{A. DFD Level 0 }
+\justify The Level 0 DFD represents the entire CodeBlueprint AI application as a single process and shows its interaction with the user.
+
+\justify \textbf{B. DFD Level 1}
+
+\justify The Level 1 DFD provides a detailed representation of the internal processes of CodeBlueprint AI.
+
+\vspace{2cm}
+\justify The project design provides a clear understanding of the architecture, functionality, and data flow of CodeBlueprint AI. The system architecture, UML diagrams, and DFDs explain how users interact with the application and how different modules work together to analyze software projects and generate meaningful results.
+
+
+\textbf{\section{ Technologies Used}}
+
+\justify CodeBlueprint AI is developed using modern web development technologies to provide an efficient, user-friendly, and reliable code analysis platform. The following technologies are used in the development of the system.
+
+\justify \textbf{1. HTML5:} HTML5 is used to create the basic structure of the web application. It defines different elements such as headings, forms, buttons, navigation menus, tables, and content sections. It provides the foundation for designing different pages of CodeBlueprint AI.
+
+\justify \textbf{2. CSS3:} CSS3 is used to improve the appearance and layout of the application. It manages colors, fonts, spacing, borders, alignment, and responsive page designs. It helps provide a consistent and user-friendly interface across different pages.
+
+\justify \textbf{3. JavaScript:} JavaScript is used to implement interactive functionality in the application. It handles user actions, form validation, API communication, data processing, and dynamic updates. It is also used for backend development with Node.js.
+
+\justify \textbf{4. React.js:} React.js is a JavaScript library used to develop the frontend of CodeBlueprint AI. It allows the application to be divided into reusable components, making development and maintenance easier. It is used to create pages such as the dashboard, project management, code analysis, security audit, and architecture visualization.
+
+\justify \textbf{5. Node.js:} Node.js is a JavaScript runtime environment used to execute server-side code. It handles backend operations, processes client requests, manages uploaded files, and supports communication between different application modules.
+
+\justify \textbf{6. Express.js:} Express.js is a web application framework for Node.js. It is used to develop backend APIs and manage HTTP requests and responses. It also helps implement authentication, project management, file uploading, and communication with MongoDB.
+
+\justify \textbf{7. MongoDB:} MongoDB is a NoSQL database used to store application data in a flexible document format. It stores user information, project details, uploaded file records, and code analysis results. It helps manage project data efficiently.
+
+\justify \textbf{8. Mermaid.js:} Mermaid.js is a JavaScript-based diagram generation tool used to create visual representations of software architecture. In CodeBlueprint AI, it generates architecture diagrams and dependency graphs using the relationships extracted from uploaded source code files. It helps users understand the structure and connections within a software project.
+
+\justify \textbf{9. Multer:} Multer is a middleware used in Node.js and Express.js applications to handle file uploads. It processes uploaded source code files and makes them available for further analysis by the backend modules.
+
+\justify \textbf{10. JWT (JSON Web Token):} JWT is used for authentication and authorization in the application. It generates authentication tokens after successful login and allows users to access protected routes and project-related features securely.
+
+\justify \textbf{11. Visual Studio Code:}Visual Studio Code is a source code editor used for developing the CodeBlueprint AI application. It provides features such as syntax highlighting, debugging, extensions, and code navigation, which help in writing and managing project files.
+
+\justify \textbf{12. NPM (Node Package Manager):} NPM is used to install and manage the packages and libraries required for application development. It helps manage frontend and backend dependencies and provides commands to run development scripts.
+
+\justify \textbf{13. Mongoose :} Mongoose is an Object Data Modeling (ODM) library used to interact with MongoDB. It provides schemas and models for organizing application data and simplifies database operations such as creating, retrieving, updating, and deleting records.
+
+\justify \textbf{14. Axios:} Axios is a JavaScript library used to make HTTP requests from the frontend to the backend. It helps send user credentials, project information, and uploaded files to backend APIs and retrieve analysis results.
+
+\justify \textbf{15. dotenv :} dotenv is a Node.js package used to load environment variables from a .env file. It helps manage sensitive configuration information, such as database connection strings and authentication-related settings, separately from the main source code.
+
+\justify \textbf{16. Nodemon :} Nodemon is a development utility used to automatically restart the Node.js server whenever changes are made to the backend source code. It makes the development and testing process faster and more convenient.
+Summary
+
+
+\justify These technologies work together to provide a complete web-based platform for automated software project analysis, architecture visualization, dependency identification, and security assessment.
+
+
+\textbf{\section{ Implementation Details}}
+
+\justify The implementation of CodeBlueprint AI involves developing different modules that work together to analyze software projects and present meaningful information to users. The application follows a modular architecture using React.js for the frontend, Node.js and Express.js for the backend, and MongoDB for database management.
+
+\justify The implementation is carried out through the following modules:
+
+
+\justify \textbf{1. Frontend Development :}The frontend of the application is developed using React.js, HTML, CSS, and JavaScript. It provides an interactive and user-friendly interface through which users can register, log in, create projects, upload source code, and view analysis results. Different pages such as Dashboard, Projects, Code Analysis, Architecture Diagram, Security Audit, and Profile are implemented as separate components.
+
+\justify \textbf{2. Backend Development :} The backend is developed using Node.js and Express.js. It handles client requests, user authentication, project management, file uploads, and communication with the database. Different API routes and controllers are created to manage the application functionalities.
+
+\justify \textbf{3. Database Implementation: } MongoDB is used to store user details, project information, uploaded file records, and analysis results. Mongoose is used to define database schemas and perform database operations. This helps maintain project-related information in an organized manner.
+
+\vspace{2cm}
+\justify \textbf{4. File Processing and Analysis:}
+When a user uploads a software project, the backend processes the uploaded files and prepares them for analysis. The system examines supported source code files and extracts relevant information. Different analyzer modules are used to perform individual analysis tasks.
+
+\justify \textbf{5. User Authentication Module :} This module allows users to register and log in to the application. JWT authentication is used to provide secure access to protected pages and project-related features.
+
+\justify \textbf{5. Project Management Module :} This module allows users to create new projects, provide project details, and manage their uploaded software projects. Project information is maintained in the MongoDB database.
+
+\justify \textbf{7. File Upload Module:} This module allows users to upload source code files and project files. Multer is used to handle file uploads, and the uploaded files are organized for further analysis.
+
+\justify \textbf{8. Language Detection Module:} This module identifies the programming languages used in the uploaded project based on file extensions. It supports different file types such as JavaScript, TypeScript, HTML, CSS, and other supported languages.
+
+\justify \textbf{9. Dependency Analysis Module :} This module identifies internal and external dependencies within the source code. It helps users understand the relationships between different files and external libraries.
+
+\justify \textbf{10. Code Metrics Module:} This module calculates important code statistics, including:
+\begin{itemize}
+    \item Total number of lines.
+\end{itemize}
+\begin{itemize}
+    \item Number of non-empty lines.
+\end{itemize}
+ \begin{itemize}
+     \item Number of comment lines.
+ \end{itemize}
+ \begin{itemize}
+     \item Number of source code files.
+ \end{itemize}
+\begin{itemize}
+    \item Number of asset files.
+\end{itemize}
+
+ 
+\justify \textbf{11. Security Analysis Module :}  This module examines source code using predefined security rules to identify potential security issues and highlight areas that may require attention.
+
+\justify \textbf{12. Architecture Visualization Module:} This module analyzes the relationships between different project components and generates architecture diagrams and dependency graphs using Mermaid.js. These diagrams provide a visual understanding of the software structure.
+
+\justify \textbf{13. Technical Debt Analysis Module:} This module provides insights into potential code quality problems and areas that may require improvement. It helps users understand possible maintenance challenges in their projects.
+
+\justify \textbf{14. Dashboard Module:} The dashboard displays project information and analysis results in an organized format. It provides an overview of projects, programming languages, code statistics, and security-related information.
+
+
+
+\justify The implementation of CodeBlueprint AI combines these modules into a single web-based application. Each module performs a specific task and contributes to the overall functionality of the system, making software project analysis and codebase understanding easier and more organized.
+
+
+
+\newpage
+\chapter{RESULTS}
+
+\justify The CodeBlueprint AI system was successfully developed to analyze software projects and provide useful insights into their structure, dependencies, code quality, and security. The application provides a user-friendly interface through which users can upload projects and view the generated analysis results.
+
+\justify The implemented system produces the following results:
+
+\justify \textbf{1. User Authentication:} Users can successfully register and log in to the application using their credentials.
+
+\justify \textbf{2. Project Management:} Users can create projects, upload source code files, and manage their project information.
+
+\justify \textbf{3. Programming Language Detection:} The system identifies the programming languages used in the uploaded project based on file extensions.
+
+\justify \textbf{4. Dependency Analysis:} The application identifies internal file dependencies and external library dependencies.
+
+\justify \textbf{5. Code Metrics:} The system calculates code statistics, including total lines, non-empty lines, comment lines, and file counts.
+
+\justify \textbf{6. Security Analysis:} The system identifies potential security issues using predefined rules and displays the analysis results.
+
+\textbf{7. Architecture Visualization:} The application generates architecture diagrams and dependency graphs using Mermaid.js to represent project structure and relationships.
+
+\justify \textbf{8. Technical Debt Analysis:} The system provides information about potential code quality issues and areas that require improvement.
+
+\justify \textbf{9. Dashboard:} The dashboard presents project details, code statistics, programming languages, and analysis information in an organized manner
+
+\justify \textbf{4.1 Result Screenshots}
+\justify The following screenshots demonstrate the working and output of the CodeBlueprint AI application.
+
+\vspace{3cm}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm,height=8cm]{Home_Page.png}
+\caption{ Home Page}
+\label{fig:A landing page}
+\end{figure}
+
+\vspace{4cm }
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=8 cm]{Register.png}
+    \caption{ Registration Page }
+    \label{fig: Registration Page }
+\end{figure}
+
+
+\vspace{4cm}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm,height=8cm]{Login.png}
+    \caption{Login Page}
+    \label{fig:Login Page}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Dashboard.png}
+    \caption{Dashboard Page}
+    \label{fig: Dashboard Page}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Project.png}
+    \caption{Project Page }
+    \label{fig:Project Page}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Project_Overview.png}
+    \caption{Project Overview Page}
+    \label{fig: Project Overview Page}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Create_Project.png}
+    \caption{Create Project Page}
+    \label{fig: Create Project Page}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Code_Analysis.png}
+    \caption{Code Analysis Page}
+    \label{fig:Code Analysis Page}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Architecture_Diagram.png}
+    \caption{Architecture Diagram Page}
+    \label{fig: Architecture Diagram Page }
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Security_Audit.png}
+    \caption{ Security Audit Page}
+    \label{fig: Security audit Page}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Technical_Debt.png}
+    \caption{ Technical Debt Page}
+    \label{fig: Technical Debt Page}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=15 cm, height=7 cm]{Profile.png}
+    \caption{ Profile Page}
+    \label{fig: Profile Page}
+\end{figure}
+
+
+
+
+\newpage
+\addcontentsline{toc}{chapter}{CONCLUSION}
+\begin{center}
+\textbf{{CONCLUSION}}       
+\end{center}
+
+
+\vspace{0.5 cm}
+
+\justify CodeBlueprint AI is a web-based application developed to simplify software project analysis and improve codebase understanding. The system provides various features, including project uploading, programming language detection, dependency analysis, code metrics calculation, security analysis, and architecture visualization.
+
+\justify The application successfully combines different analysis modules into a single platform, reducing the effort required for manual code inspection. The use of Mermaid.js helps generate architecture diagrams and dependency graphs, making project structures and relationships easier to understand.
+
+\justify Furthermore, CodeBlueprint AI provides a user-friendly interface through which students and developers can analyze their software projects and identify potential areas for improvement. It helps improve code understanding, supports software maintenance, and makes project analysis more organized and efficient.
+
+\justify Overall, the project achieves its main objective of providing an automated and centralized platform for understanding and analyzing software codebases.
+
+\newpage
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+\begin{center}
+\textbf{{REFERENCES}}       
+\end{center}
+
+\vspace{0.5 cm}
+
+ 
+     \begin{itemize}
+         \item N. Anquetil and T. C. Lethbridge, “Recovering software architecture from the names of source files”, Journal of Software Maintenance: Research and Practice, vol. 11, no. 3, pp. 201–221, 1999.
+     \end{itemize}
+ 
+
+   \begin{itemize}
+       \item T. J. McCabe, “A complexity measure”, IEEE Transactions on Software Engineering, vol. SE-2, no. 4, pp. 308–320, 1976.
+   \end{itemize}
+
+    \begin{itemize}
+        \item T. Lutellier, D. Chollak, J. Garcia, L. Tan, D. Rayside, N. Medvidović, and R. Kroeger, “Measuring the impact of code dependencies on software architecture recovery techniques”, IEEE Transactions on Software Engineering, vol. 44, no. 2, pp. 159–181, 2018.
+    \end{itemize}
+
+    \begin{itemize}
+        \item P. Avgeriou, D. Taibi, A. Ampatzoglou, et al., “An overview and comparison of technical debt measurement tools”, IEEE Software, vol. 38, no. 3, pp. 61–71, 2021.
+    \end{itemize}
+
+
+\end{document} 
